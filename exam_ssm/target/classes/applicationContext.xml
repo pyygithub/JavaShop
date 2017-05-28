@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/aop 
+	http://www.springframework.org/schema/aop/spring-aop.xsd
+	http://www.springframework.org/schema/tx
+	http://www.springframework.org/schema/tx/spring-tx.xsd">
+	<!-- spring核心配置文件-->
+	<!-- 开启注解扫描 -->
+	<context:component-scan base-package="com.bdyc.service"></context:component-scan>
+	
+	<!-- 读取db.properties -->
+	<context:property-placeholder location="classpath:db.properties"/>
+	
+	<!-- 数据库连接池 -->
+	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
+		destroy-method="close">
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+		<property name="driverClassName" value="${jdbc.driver}" />
+		<property name="maxActive" value="10" />
+		<property name="minIdle" value="5" />
+	</bean>
+	
+	
+	<!-- 整合Mybatis：创建SqlSessionFactory  -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+		<!-- 为指定包下的所有类起别名：user User -->
+		<property name="typeAliasesPackage" value="com.bdyc.po"></property>
+		<!-- 配置映射文件引入路径 -->
+		<property name="mapperLocations" value="classpath:com/bdyc/mapper/*.xml"></property>
+		<!-- 引入式配置：引入Mybatis配置文件 -->
+		<property name="configLocation" value="classpath:mybatis-config.xml"></property>
+	</bean>
+	
+	<!-- Mapper扫描器：spring会自动去指定包下找到对应接口，并为这些接口实例化
+		读取xxxMapper.xml文件，生成接口实现类对象,默认bean对象名称：接口首字母小写
+		
+		UserMapper userMapper = session.getMapper(UserMapper.class);
+	 -->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<!-- basePackage：制定扫描的根路径-->
+		<property name="basePackage" value="com.bdyc.mapper"></property>
+	</bean>
+	
+	
+	
+	<!-- 配置事务管理器:管理Mybatis事务 -->
+	<bean id="tx" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	
+	<!-- 通知 -->
+	<tx:advice id="txAdvice" transaction-manager="tx">
+		<tx:attributes>
+			<!-- 传播行为 -->
+			<tx:method name="save*" propagation="REQUIRED" />
+			<tx:method name="insert*" propagation="REQUIRED" />
+			<tx:method name="add*" propagation="REQUIRED" />
+			<tx:method name="create*" propagation="REQUIRED" />
+			<tx:method name="delete*" propagation="REQUIRED" />
+			<tx:method name="del*" propagation="REQUIRED" />
+			<tx:method name="update*" propagation="REQUIRED" />
+			<tx:method name="find*" propagation="SUPPORTS" read-only="true" />
+			<tx:method name="select*" propagation="SUPPORTS" read-only="true" />
+			<tx:method name="get*" propagation="SUPPORTS" read-only="true" />
+		</tx:attributes>
+	</tx:advice>
+	<!-- 切面 -->
+	<aop:config>
+		<aop:advisor advice-ref="txAdvice" pointcut="execution(* com.bdyc.service.*.*(..))" />
+	</aop:config>
+</beans>

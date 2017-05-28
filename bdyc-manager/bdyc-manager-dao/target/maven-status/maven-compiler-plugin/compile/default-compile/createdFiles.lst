@@ -1,0 +1,6 @@
+com\bdyc\mapper\ContentMapper.class
+com\bdyc\mapper\ItemMapper.class
+com\bdyc\mapper\OrderShippingMapper.class
+com\bdyc\mapper\UserMapper.class
+com\bdyc\mapper\ContentCategoryMapper.class
+com\bdyc\mapper\ItemDescMapper.class

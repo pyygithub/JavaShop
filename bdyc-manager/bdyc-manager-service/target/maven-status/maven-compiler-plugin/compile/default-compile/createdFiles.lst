@@ -1,0 +1,5 @@
+com\bdyc\service\impl\ItemCategoryParamServiceImpl.class
+com\bdyc\service\impl\ItemServiceImpl.class
+com\bdyc\service\impl\ContentCategoryServiceImpl.class
+com\bdyc\service\impl\ContentServiceImpl.class
+com\bdyc\service\impl\ItemCatServiceImpl.class

@@ -1,0 +1,292 @@
+/*购物车流程开始*/
+.flow_steps {
+    float: right;
+    height: 3px;
+    margin: 53px 40px 0 0;
+    width: 615px;
+}
+.flow_steps ol {
+    margin: 0 auto;
+}
+.flow_steps ol li {
+    float: left;
+    height: 3px;
+    position: relative;
+    list-style: outside none none;
+}
+.flow_steps ol .num1 {
+    background: #ff6700;
+    width: 163px;
+}
+.flow_steps ol .num2 {
+    background: #dedede;
+    width: 290px;
+}
+.flow_steps ol .num3 {
+    background: #dedede;
+    width: 162px;
+}
+.flow_steps ol li span {
+    bottom: -35px;
+    color: #999;
+    display: block;
+    height: 16px;
+    left: -16px;
+    position: absolute;
+    width: 100px;
+}
+.flow_steps ol .num1 span {
+    color: #ff6700;
+}
+.flow_steps ol .num2 span {
+    left: 108px;
+}
+.flow_steps ol .num3 span {
+    left: 130px;
+}
+.flow_steps ol li em {
+    background: #dedede none repeat scroll 0 0;
+    border: 3px solid #fff;
+    border-radius: 13px;
+    color: #666;
+    height: 18px;
+    left: 0;
+    line-height: 18px;
+    position: absolute;
+    text-align: center;
+    top: -11px;
+    width: 18px;
+    font-style: normal;
+}
+.flow_steps ol .num1 em {
+    background: #ff6700 none repeat scroll 0 0;
+    color: #fff;
+}
+.flow_steps ol .num2 em {
+    left: 128px;
+}
+.flow_steps ol .num3 em {
+    left: 150px;
+}
+/*购物车流程结束*/
+/*购物车内容开始*/
+.mycar_index {
+    margin: 0 auto;
+    width: 1200px;
+}
+.mycar_index h1 {
+    color: #333;
+    font-size: 22px;
+    height: 55px;
+    line-height: 55px;
+    position: relative;
+    width: 85px;
+    font-weight: normal;
+    width: 1200px;
+    display: block;
+}
+#cart_wrapper {
+    width: 1200px;
+    overflow: hidden;
+}
+#cart_wrapper table {
+    width: 1200px;
+    border: 1px solid #f5f5f5;
+    border-bottom: 0px none;
+    border-collapse: collapse;
+}
+#cart_wrapper table tr th {
+    background: #f5f5f5 none repeat scroll 0 0;
+    height: 50px;
+    text-align: center;
+}
+#cart_wrapper  table tr td {
+    border-bottom: 1px solid #f5f5f5;
+    color: #333;
+    padding: 15px 0;
+    text-align: center;
+}
+#cart_wrapper table tr td .cart_list_img {
+    float: left;
+    margin: 0px 0px 0px 30px;
+    display: block;
+    
+}
+#cart_wrapper table tr td img {
+    width: 50px;
+    height: 50px;
+}
+#cart_wrapper table tr td p {
+    width: 540px;
+    overflow: height:50px;
+    float: left;
+    text-align: left;
+    color: #337ab7;
+}
+#cart_wrapper table tr td p a {
+    display: block;
+    font-size: 14px;
+    line-height: 50px;
+    margin-left: 15px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 540px;
+    overflow: hidden;
+    text-align: left;
+}
+.Numinput {
+    display: inline-block;
+}
+.Numinput span {
+    float: left;
+    height: 22px;
+    width: 23px;
+    line-height: 22px;
+    text-align: center;
+    cursor: pointer;
+}
+.Numinput input {
+    float: left;
+    display: inline;
+    height: 22px;
+    line-height: 22px;
+    border: 1px solid #e3e2e2;
+    text-align: center;
+}
+.cart_last .delete {
+    background: url("../img/cart/mycar_icon05.png") no-repeat center center;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    display: inline-block;
+}
+/*总价开始*/
+.cart_wrapper {
+    width: 1200px;
+    text-align: right;
+    padding-top: 30px;
+}
+.cart_wrapper span {
+    font-size: 16px;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    text-align: right;
+    width: 550px;
+}
+.cart_tools {
+    width: 1200px;
+    height: 50px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+/*总价结束*/
+/*mask开始*/
+.mask{
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.4);
+	position: fixed;
+	top:0;
+	left:0;
+	z-index: 9998;
+	display: none;
+}
+.nologin_mask_con,.collect_mask_con{
+	width: 260px;
+	position: absolute;
+	left:50%;
+	top:34%;
+	-ms-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	border: 8px solid rgba(0,0,0,.2);
+	background: #fff;
+	 z-index: 9999;
+	 border-radius: 3px;
+	 display: none;
+}
+.nologin_mask_con .title{
+    border-bottom: 1px solid #DDD;
+    background: none;
+    width: 100%;
+    height: 30px;
+}
+.nologin_mask_con .title:before{
+    content: "";
+    display: block;
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    top: 26px;
+    left: 0;
+    background: #FFF;
+    z-index: 1;
+}
+.nologin_mask_con .title:after{
+    content: "";
+    display: block;
+    height: 8px;
+    width: 100%;
+    position: absolute;
+    top: 26px;
+    left: 0;
+    background: -moz-radial-gradient(center,ellipse cover,#c8c8c8 10%,#FFFFFF 75%);
+    background: -webkit-radial-gradient(center,ellipse cover,#c8c8c8 10%,#FFFFFF 75%);
+    background: -o-radial-gradient(center,ellipse cover,#c8c8c8 10%,#FFFFFF 75%);
+    background: -ms-radial-gradient(center,ellipse cover,#c8c8c8 10%,#FFFFFF 75%);
+    background: radial-gradient(center,ellipse cover,#c8c8c8 10%,#FFFFFF 75%);
+}
+.nologin_mask_con .title h2{
+	float: left;
+	text-align: left;
+	height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #336699;
+    padding-left: 7px;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.nologin_mask_con .title a{
+	float: right;
+	display: block;
+    color: #888;
+    font-size: 27px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 2px;
+    font-weight: 500;
+    text-align: center;
+    margin: 5px;
+}
+.nologin_mask_con .title a.ui_close:hover{
+    color: #FFF;
+    outline: 0 none;
+    background: #c72327;
+}
+.button_wrapper .btn_div {
+    float: left;
+    display: inline;
+    height: 30px;
+    margin: 10px 0px 10px 0px;
+}
+.button_wrapper .btn_div input {
+    width: 108px;
+    height: 30px;
+    line-height: 28px;
+    margin: 0px 0px 0px 15px;
+}
+.nologin_mask_content p{
+	text-align: center;
+	line-height: 30px;
+}
+/*mask结束*/
+/*弹窗内容开始*/
+/*弹窗内容结束*/
+
+/*购物车内容结束*/

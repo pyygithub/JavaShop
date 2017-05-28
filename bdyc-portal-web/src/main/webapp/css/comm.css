@@ -1,0 +1,663 @@
+/*头部开始*/
+body, dl, dt, dd, ol, ul, pre, form, field, input, blockquote, th, td, h1, h2, h3, h4, h5, h6, div，a, ul, li, p, input {
+    font: 14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #4B4C4C;
+    font-size: 12px;
+    font-weight: normal;
+}
+.clear {
+    clear: both;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+}
+header{
+	width: 100%;
+	height: 30px;
+	background: #F4F4F4;
+	border-bottom: 1px solid #e5e5e5;
+}
+header .header{
+	width: 1200px;
+	margin:0 auto;
+	height: 100%;
+	line-height: 30px;
+}
+header span.title{
+    
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    font-size: 12px;
+}
+header span.title a{
+	color: #337ab7;
+}
+header span.title a:hover{
+	color:#333;
+}
+header .login_bar {
+	margin-left: 15px;
+	color:#666;
+	
+}
+header .login_bar a{
+	display: block;
+	line-height: 30px;
+	text-decoration: underline;
+}
+header .login_bar a.register{
+	margin-left: 10px;
+}
+header .navigation ul li{
+	font-size: 12px;
+    height: 30px;
+    float: left;
+    background: url(../img/index/top_li_bg.gif) no-repeat scroll right;
+    line-height: 30px;
+    padding: 0 15px;
+}
+header .navigation ul li a{
+	color: #999;
+}
+header .navigation ul li a:hover{
+	color: #2a8800;
+}
+header  .navigation ul li.cart_bar_wrapper:hover{
+	background: #fff;
+}
+.navigation ul li.first {
+    background: none;
+    padding: 0px;
+    height: 31px;
+    position: relative;
+}
+.cart_bar_wrapper .common_cart_down{
+    font-size: 0px;
+    line-height: 0;
+    vertical-align: middle;
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    margin: 2px 0px 0px 8px;
+    border-width: 4px;
+    border-color: #777 transparent transparent transparent;
+    border-style: solid dashed dashed dashed;
+    -webkit-transition:-webkit-transform .2s ease-in;
+    -moz-transition: -webkit-transform .2s ease-in;
+    -o-transition: -webkit-transform .2s ease-in;
+    transition:-webkit-transform .2s ease-in;
+}
+.cart_bar_wrapper .cart_content02{
+	width: 337px;
+    position: absolute;
+    top: 30px;
+    background: #fff;
+    z-index: 99;
+    left: 0px;
+    box-shadow: 0 2px 5px #ccc;
+    text-align: center;
+    overflow: hidden;
+    display: none;
+}
+.cart_bar_wrapper  .cart_content02 .no_cartlist {
+    background: url(../img/index/shop_car.png) no-repeat 30px center #fff;
+    height: 49px;
+    line-height: 55px;
+    margin: 20px 0px;
+    overflow: hidden;
+    font-size: 14px;
+    padding: 0px 0px 0px 50px;
+}
+.cart_content02 .my_cartlist_all {
+    display: block;
+    padding: 10px;
+    max-height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+.cart_content02 .last {
+    border: 0px none;
+}
+.cart_content02 dl {
+    display: block;
+    height: 90px;
+    clear: both;
+    border-bottom: solid 1px #DDD;
+    position: relative;
+    z-index: 1;
+    width: 94%;
+    margin: 0px 3%;
+}
+.cart_content02 dt, .cart_content02 dd {
+    background-color: transparent;
+    border: 0;
+    position: absolute;
+    z-index: 1;
+}
+.goods_thumb {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    top: 8px;
+    left: 8px;
+}
+.goods_thumb a {
+    display: table-cell;
+    height: 80px;
+    line-height: 0;
+    overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+    width: 80px;
+    cursor: pointer;
+}
+.goods_thumb a img {
+    width: 70px;
+    height: 70px;
+}
+.my_cartlist_all dl .goods_name {
+    background-color: transparent;
+    left: 90px;
+    line-height: 16px;
+    padding: 0;
+    text-align: left;
+    top: 15px;
+    width: 130px;
+}
+.my_cartlist_all dl .goods_name p {
+    width: 130px;
+    font-size: 13px;
+    color: #333;
+    line-height: 20px;
+    overflow: hidden;
+}
+.my_cartlist_all dl .goods_name a {
+    font: 13px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+    color: #333;
+}
+.my_cartlist_all dl .goods_price {
+    box-shadow: none;
+    height: 16px;
+    padding: 0;
+    right: 25px;
+    text-align: right;
+    top: 15px;
+}
+.my_cartlist_all dl .handle {
+    right: 0px;
+    top: 15px;
+    position: absolute;
+}
+.my_cartlist_all dl .handle p {
+    display: block;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.cart_content02 .checkout {
+    width: 337px;
+    height: 60px;
+    background: #f8f9fa;
+}
+.cart_content02 .checkout span {
+    float: left;
+    color: #ff5c00;
+    font-size: 24px;
+    font-weight: 200;
+    height: 60px;
+    line-height: 60px;
+    margin-left: 30px;
+}
+.cart_content02 .checkout a {
+    transition: all 0.4s ease 0s;
+    width: 118px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    display: block;
+    float: right;
+    background: #ff6700;
+    margin: 12px 10px 0px 0px;
+    color: #fff;
+}
+/*通用按钮开始*/
+.btn_div input, .btn_div a {
+    border: 0 none;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-weight: normal;
+    font: 14px/35px "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+    margin-left: 10px;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+    transition: all 0.4s ease 0s;
+    height: 38px;
+    line-height: 38px;
+}
+.cart_tools .btn_div input {
+    float: right;
+}
+.btn_div .white_btn {
+    margin-left: 12px;
+    width: 180px;
+    background: #fff;
+    color: #757575;
+    border: 1px solid #b0b0b0;
+}
+.btn_div .white_btn:hover{
+    background: #757575;
+    border-color: #757575;
+    color: #fff;
+}
+.btn_div .green_btn {
+    margin-left: 12px;
+    width: 180px;
+    background: #33a600;
+    border: 1px solid #33a600;
+    color: #fff;
+}
+.btn_div .yellow_btn {
+    margin-left: 12px;
+    width: 180px;
+    background: #ff6700;
+    border: 1px solid #ff6700;
+    color: #fff;
+}
+.btn_div .small_green {
+    font-size: 12px;
+    height: 28px;
+    line-height: 28px;
+    width: 80px;
+    background: #33a600;
+    border: 1px solid #33a600;
+}
+.btn_div .small_yellow {
+    font-size: 12px;
+    height: 28px;
+    line-height: 28px;
+    width: 80px;
+    background: #ff6700;
+    border: 1px solid #ff6700;
+}
+/*通用按钮结束*/
+/*头部开始*/
+/*内容顶部开始*/
+.top{
+	width:1200px;
+	height: 120px;
+	margin:0 auto;
+}
+
+.top .logo{
+	display: table-cell;
+	vertical-align: middle;
+    text-align: center;
+    margin-top: 24px;
+    width: 245px;
+    height: 89px;
+    
+}
+.top .logo img {
+  max-height: 76px;
+  vertical-align: middle;
+}
+/*搜索样式开始*/
+.search_area{
+	height: 100px;
+    margin-left: 85px;
+    overflow: hidden;
+    width: 530px;
+}
+.search_area .search {
+    height: 38px;
+    margin-bottom: 5px;
+    margin-top: 34px;
+    overflow: hidden;
+    width: 530px;
+}
+.search_area .search div{
+	border:1px solid #dcdcdc;
+	height:34px;
+	overflow:hidden;
+	width:300px;
+	border-right:0px none;
+}
+.search_area .search .s_seek{
+	border:1px solid #33a600;
+	height:34px;
+	overflow:hidden;
+	width:100px;
+	background: #33a600 none repeat scroll 0 0;
+    color: #fff;
+    font-size: 16px;
+    line-height: 34px;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+}
+.search_area .search .hunt {
+    background: #fff url("../img/index/search_icon.png") no-repeat left top;
+    border: 0px none;
+    color: #afaeae;
+    height: 34px;
+    line-height: 34px;
+    overflow: hidden;
+    padding-left: 36px;
+    width: 330px;
+}
+.search_area .hot_keyword {
+    width: 530px;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+}
+.search_area .hot_keyword h1 {
+    height: 20px;
+    line-height: 20px;
+    color: #666;
+    font-weight: normal;
+    font-size: 12px;
+}
+.search_area .hot_keyword ul {
+    height: 20px;
+    line-height: 20px;
+    overflow: hiddne;
+}
+.search_area .hot_keyword ul li {
+    float: left;
+    display: inline;
+    margin-right: 10px;
+}
+.search_area .hot_keyword ul li a {
+    padding-right: 20px;
+    background: url(../img/index/libk.png) no-repeat right -4px;
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+    color: #337ab7;
+}
+.search_area .hot_keyword ul li a:hover{
+	color:#333;
+}
+/*搜索样式结束*/
+/*service_tel样式开始*/
+.service_tel {
+    height: 70px;
+    margin-top: 15px;
+    width: 320px;
+}
+/*service_tel样式结束*/
+/*内容顶部结束*/
+/*菜单样式开始*/
+.common_menu {
+    border-bottom: 3px solid #33a600;
+    height: 41px;
+    width: 100%;
+}
+.common_menu .menu {
+    height: 41px;
+    margin: 0 auto;
+    width: 1200px;
+}
+/*菜单左部样式开始*/
+.common_menu .menu .menu_left {
+    height: 41px;
+    width: 210px;
+    z-index: 99;
+    position: relative;
+}
+.common_menu .menu .menu_left .all_sort_list.is_show{
+	display: block;
+}
+.common_menu .menu .menu_left .good_list {
+    background: #2a8800 url("../img/index/menu_icon01.png") no-repeat 36px 15px;
+    color: #fff;
+    font-size: 18px;
+    height: 44px;
+    line-height: 41px;
+    padding-left: 60px;
+    width: 150px;
+}
+.common_menu .menu .menu_left .all_sort_list {
+    background: #33a600 none repeat scroll 0 0;
+    display: block;
+    height: 490px;
+    left: 0;
+    position: absolute;
+    top: 44px;
+    width: 210px;
+    z-index: 999;
+    display: none;
+}
+/*单个类别开始*/
+.common_menu .menu .menu_left .all_sort_list .item_box {
+    height: 70px;
+    width: 210px;
+    position: relative;
+}
+.all_sort_list .item_box .children_show{margin:0px 0px 0px 15px;border:0px none;background:#fff;}
+.all_sort_list .item_box .children_show .common_item_title a{color:#33a600}
+.all_sort_list .item_box .children_show .common_item_list a{color:#33a600}
+.item_box .item {
+    border-bottom: 1px dashed #269500;
+    height: 55px;
+    padding: 15px 5px 0;
+    margin: 0px 10px;
+    width: 180px;
+    -webkit-transition: all 0.4s ease 0s;
+    transition:all 0.4s ease 0s;
+}
+.item_box .item .common_item_title {
+    height: 21px;
+    overflow: hidden;
+    width: 180px;
+}
+.item_box .item .common_item_title a {
+    color: #fff;
+    display: block;
+    float: left;
+    font-size: 14px;
+    height: 21px;
+    line-height: 21px;
+    overflow: hidden;
+    width: 180px;
+}
+.item_box .item .common_item_list {
+    height: 20px;
+    margin-top: 5px;
+    overflow: hidden;
+    width: 170px;
+}
+.item_box .item .common_item_list a {
+    color: #fff;
+    line-height: 22px;
+    margin-right: 6px;
+}
+.item_list {
+    background: #fff none repeat scroll 0 0;
+    box-shadow: 1px 2px 8px #d6c9b6;
+    display: block;
+    padding: 10px 0 10px 0px;
+    left: 210px;
+    position: absolute;
+    top: 0;
+    width: 532px;
+    display: none;
+    z-index: 9999;
+}
+.item_list .subitem {
+    width: 510px;
+    overflow: hidden;
+}
+.item_list .subitem dl {
+    width: 510px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.item_list .subitem dl dt a {
+    font-weight: 700;
+    padding: 8px 20px 0px 20px;
+    position: relative;
+    text-align: right;
+    width: 90px;
+    min-width: 90px;
+    display: block;
+    overflow: hidden;
+}
+.item_list .subitem dl dt i {
+	font-family: consolas;
+	font-style: normal;
+	font-weight: 400;
+    font-size: 9px;
+    line-height: 14px;
+    height: 14px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 4px;
+}
+.item_list .subitem dl dd {
+    width: 380px;
+    overflow: hidden;
+    float: left;
+    border-bottom: 1px solid #eee;
+    padding: 8px 0px;
+}
+.item_list .subitem dl dd a {
+    border-left: 1px solid #e0e0e0;
+    float: left;
+    height: 16px;
+    line-height: 16px;
+    padding: 0 8px;
+    white-space: nowrap;
+}
+.index-show-children {
+    position: absolute;
+    z-index: 10;
+    transition: all 0.4s ease 0s;
+    background: url(../img/index/top_bg.png) no-repeat -150px -10px;
+    width: 5px;
+    height: 9px;
+    top: 27px;
+    left: 190px;
+}
+/*单个类别结束*/
+/*菜单左部样式结束*/
+/*菜单右部样式开始*/
+.common_menu .menu .menu_right {
+    height: 41px;
+    width: 990px;
+}
+.common_menu .menu .menu_right a {
+    color: #333;
+    float: left;
+    font-size: 18px;
+    height: 41px;
+    line-height: 41px;
+    text-align: center;
+    width: 120px;
+}
+/*菜单右部样式结束*/
+/*菜单样式结束*/
+
+/*底部开始*/
+.footer {
+    width: 100%;
+    float: left;
+    margin-top: 50px;
+}
+.footer .service_area {
+    width: 1200px;
+    margin: 0 auto;
+    border-top: 2px solid #48bb44;
+}
+.footer .service_area .service_item {
+    width: 1200px;
+    height: 165px;
+    margin-top: 30px;
+}
+.footer .service_area .service_item .item {
+    width: 145px;
+    height: 165px;
+    float: left;
+    position: relative;
+    margin-right: 15px;
+    margin-left: 5px;
+}
+.footer .service_area .service_item .item .icon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 41px;
+    height: 42px;
+}
+.footer .service_area .service_item .item .icon01 {
+    background: url(../img/index/index_service_p01.gif) no-repeat;
+}
+.footer .service_area .service_item .item .icon02 {
+    background: url(../img/index/index_service_p02.gif) no-repeat;
+}
+.footer .service_area .service_item .item .icon03 {
+    background: url(../img/index/index_service_p03.gif) no-repeat;
+}
+.footer .service_area .service_item .item .icon04 {
+    background: url(../img/index/index_service_p04.gif) no-repeat;
+}
+.footer .service_area .service_item .item .icon05 {
+    background: url(../img/index/index_service_p05.gif) no-repeat;
+}
+.footer .service_area .service_item .item .icon06 {
+    background: url(../img/index/index_service_p06.gif) no-repeat;
+}
+.footer .service_area .service_item .item .title {
+    margin-left: 50px;
+    color: #666666;
+    font-weight: bold;
+    display: block;
+    float: left;
+    _margin-left: 25px;
+    _font-size: 16px;
+    _margin-top: 10px;
+}
+.footer .service_area .service_item .item ul {
+    float: left;
+    margin-left: 50px;
+    margin-top: 10px;
+    _margin-left: 25px;
+    _margin-top: 20px;
+    width: 85px;
+}
+.footer .service_area .service_item .item ul li {
+    margin-top: 4px;
+}
+.footer .service_area .service_item .item ul li a {
+    color: #999999;
+    font-size: 12px;
+}
+.footer .service_area .service_item .item img {
+    margin-top: 10px;
+    margin-left: 30px;
+    _margin-top: 20px;
+    width: 110px;
+    height: 110px;
+}
+.footer .copyright {
+    width: 650px;
+    height: 50px;
+    margin: 30px auto;
+}
+.footer .copyright span {
+    display: block;
+    color: #999999;
+    font-size: 12px;
+    margin-top: 10px;
+}
+.footer .copyright span em{
+	font-style: normal;
+}
+/*底部结束*/

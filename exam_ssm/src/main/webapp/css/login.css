@@ -1,0 +1,157 @@
+html{ padding:0; margin:0; font-family:Tahoma, Geneva, 'Simsun';}
+body, form, ul, li, img{margin:0; padding:0; border:none}
+div, span,a, td, font{ font-size:9pt;}
+body{background:#fff}
+
+/*登录页面样式*/
+.login_body{
+	overflow: hidden;
+	background:url(../img/login_bg.jpg) no-repeat;
+	background-size: cover;
+}
+.login_container{
+	width:500px;
+	margin:150px auto;
+	clear:both;
+}
+.login_container .login_form{
+	width: 100%;
+    height: 320px;
+    clear: both;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    padding: 1px;
+    background: #fff;
+}
+.login_container .login_foot{
+	width: 100%;
+    line-height: 20px;
+    text-align: center;
+    clear: both;
+    margin: 20px 0;
+}
+.login_title{
+	height: 80px;
+    margin: 10px 0 15px 0;
+    background: #fff;
+    border-bottom: solid 1px #eee;
+}
+.login_title .login_title_center{
+	width:400px;
+	margin:0 auto;
+}
+.login_title img{
+	height:50px;
+	vertical-align: middle;
+	margin-right:20px;
+}
+.login_title span{
+    vertical-align:middle;
+	font-size: 25px;
+    line-height: 80px;
+    font-family: 'Microsoft Yahei',Tahoma, Geneva, 'Simsun';
+}
+.login_content{
+	width:400px;
+	margin:0 auto;
+}
+.login_content .form-group{
+	height:38px;
+	line-height:38px;
+}
+.login_content .form-group label{
+	display: inline-block;
+	width:100px;
+	line-height:38px;
+	text-align: center;
+	font-weight: bold;
+}
+.login_content .form-group input{
+	background-color: #fff;
+    border: 1px solid #ccc;
+    height: 18px;
+    width:255px;
+    padding: 4px 6px;
+    font-size: 12px;
+    line-height: 18px;
+    color: #555;
+    vertical-align: middle;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.login_content .form-group .rememberPassword{
+	width:16px;
+	outline:none;
+}
+.login_content .form-group select{
+	height: 28px;
+    padding: 4px 6px;
+    font-size: 12px;
+    line-height: 28px;
+    color: #555;
+    vertical-align: middle;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+.login_content .form-group .code_input{
+	background-color: #fff;
+    border: 1px solid #ccc;
+    height: 18px;
+    width:50px;
+    margin-left:10px;
+    padding: 4px 6px;
+    font-size: 12px;
+    line-height: 18px;
+    color: #555;
+    vertical-align: middle;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.login_content .form-group .code_img{
+	height: 28px;
+	vertical-align: middle;
+	cursor:pointer;
+}
+.login_content .btn .btn_blue{
+	display: inline-block;
+    font-size: 14px;
+    width:150px;
+    line-height: 30px;
+    text-align: center;
+    color:#fff;
+    background:#006DCC;
+    border:1px solid #006DCC;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    margin:20px 0 0 105px;
+    cursor:pointer;
+}
+
+.login_content .btn .btn_default{
+	display: inline-block;
+    font-size: 14px;
+    width:100px;
+    line-height: 30px;
+    text-align: center;
+    color:#333;
+    background:#F5F5F5;
+    border:1px solid #ccc;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    margin-top:20px;
+    cursor:pointer;
+}
+.login_content .error span{
+	display:block;
+	height:30px;
+	line-height:30px;
+	text-align: center;
+	color:red;
+}
